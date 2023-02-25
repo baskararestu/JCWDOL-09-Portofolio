@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #069a8e;
+}
+/* navbar */
+nav {
+  background-color: #069a8e;
+  height: 50px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+li {
+  display: flex;
+  height: 100%;
+}
+
+a {
+  display: block;
+  padding: 0 20px;
+  line-height: 50px;
+  color: white;
+  text-decoration: none;
+}
+.container {
+  padding: 0 10%;
+}
+/* home */
+#home {
+  background-color: #f7ff93;
+
+  padding: 80px;
+}
+.section-profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container-home {
+  margin: 20px 50px;
+  color: #111111;
+}
+.container-home h1 {
+  font-size: 100px;
+}
+
+p {
+  width: 500px;
+  color: #111111;
+}
+
+img {
+  width: 350px;
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* education */
+#edu {
+  padding: 80px;
+}
+.edu-container {
+  padding: 0;
+}
+#edu .title {
+  text-align: center;
+  color: white;
+}
+.edu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.edu-box {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin: 10px;
+  color: white;
+  /* width: 700px; */
+}
+.edu-title p {
+  color: white;
+}
+.edu-box img {
+  margin: 0 20px;
+  width: 100px;
+  height: 100px;
+}
+.edu-title {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  gap: 0;
+  margin: 5px 0;
+}
+#school {
+  font-style: italic;
+  margin: 5px 0;
+}
+.edu-years {
+  display: flex;
+  text-align: right;
+  padding: 0 15px;
+  margin-top: 5px;
+  color: white;
+}
+.edu-years p {
+  color: white;
+}
+/* contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  background-color: #fceb21;
+}
