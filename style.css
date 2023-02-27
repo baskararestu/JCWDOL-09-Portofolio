@@ -6,35 +6,51 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #069a8e;
 }
-/* navbar */
+
 nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #069a8e;
   height: 50px;
+  z-index: 1;
 }
-
-ul {
+nav {
+  transition: top 0.3s;
+}
+nav.scrolled {
+  top: 0;
+}
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-li {
-  display: flex;
-  height: 100%;
+nav li {
+  float: left;
 }
 
-a {
+nav li a {
   display: block;
   padding: 0 20px;
   line-height: 50px;
   color: white;
   text-decoration: none;
 }
+nav li a:hover {
+  background-color: #111;
+}
 .container {
   padding: 0 10%;
 }
+/* end navbar */
+
 /* home */
 #home {
   background-color: #f7ff93;
@@ -53,8 +69,7 @@ a {
   font-size: 100px;
 }
 
-p {
-  /* width: 500px; */
+#home p {
   color: #111111;
 }
 
@@ -64,32 +79,32 @@ img {
   margin-top: 10px;
   border-radius: 10px;
 }
+/* end home */
 
 /* education */
 #edu {
-  padding: 80px;
+  padding: 10px;
 }
 .edu-container {
-  padding: 0;
+  padding: 0 10%;
 }
 #edu .title {
   text-align: center;
   color: white;
 }
+
 .edu-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   flex-direction: column;
 }
 .edu-box {
   display: flex;
-  justify-content: space-between;
+
   border: 2px solid white;
   border-radius: 20px;
   margin: 10px;
   color: white;
-  /* width: 700px; */
 }
 .edu-title p {
   color: white;
@@ -99,10 +114,13 @@ img {
   width: 100px;
   height: 100px;
 }
+.edu-content {
+  margin: 7px 10px;
+}
 .edu-title {
   display: flex;
-  /* background-color: red; */
-  flex-direction: column;
+
+  justify-content: space-between;
   gap: 0;
   margin: 5px 0;
 }
@@ -110,19 +128,100 @@ img {
   font-style: italic;
   margin: 5px 0;
 }
-.edu-years {
-  display: flex;
-  text-align: right;
-  padding: 0 15px;
-  margin-top: 5px;
-  color: white;
-}
-.edu-years p {
-  color: white;
-}
+/* end education */
+
+/* myproject */
+/* end myproject */
+
 /* contact */
 .contact {
   display: flex;
   flex-direction: column;
   background-color: #fceb21;
+}
+/* end contact */
+/* CSS for screens that are 768px or wider */
+@media only screen and (min-width: 768px) {
+  /* navbar */
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  #home {
+    width: 100%;
+  }
+  /* aboutme */
+  .container-profile {
+    float: left;
+    width: 40%;
+    margin-right: 20px;
+  }
+
+  .container-home {
+    float: left;
+    width: 50%;
+  }
+
+  /* Profile */
+  .edu-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* CSS for screens that are 480px or wider */
+@media only screen and (min-width: 480px) {
+  /* navbar */
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #home {
+    width: 100%;
+  }
+  /* aboutme */
+  .container-profile {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .container-home {
+    float: none;
+    width: 100%;
+  }
+
+  /* Profile */
+  .edu-box {
+    margin-bottom: 30px;
+  }
+}
+/* screen more than 320px */
+@media only screen and (min-width: 320px) {
+  /* navbar */
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #home {
+    width: 100%;
+    background-color: #f7ff93;
+  }
+  /* aboutme */
+  .container-profile {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .container-home {
+    float: none;
+    width: 100%;
+  }
+
+  /* Profile */
+  .edu-box {
+    margin-bottom: 30px;
+  }
 }
